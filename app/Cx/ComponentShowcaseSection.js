@@ -84,7 +84,10 @@ function Tile({ children, className = "" }) {
 
 export default function ComponentShowcaseSection() {
   return (
-    <section className="bg-white px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-12">
+    <section
+      id="spreadsheet"
+      className="scroll-mt-6 bg-white px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-12"
+    >
       <div className="mx-auto grid w-full max-w-lg grid-cols-2 gap-2 sm:max-w-2xl sm:gap-2.5 md:max-w-3xl md:gap-3">
         <Tile>
           <Image

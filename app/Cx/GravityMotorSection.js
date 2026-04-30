@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export default function GravityMotorSection() {
   return (
-    <section className="bg-white px-4 py-10 sm:px-6 md:px-8 md:py-12">
+    <section
+      id="about"
+      className="scroll-mt-6 bg-white px-4 py-10 sm:px-6 md:px-8 md:py-12"
+    >
       <div className="mx-auto grid max-w-screen-2xl items-center gap-8 md:grid-cols-2 md:gap-8 lg:gap-10 xl:gap-12">
         {/* Crop intrinsic side padding in the PNG via cover + portrait box */}
         <div className="relative mx-auto aspect-3/4 w-full max-w-md overflow-hidden sm:max-w-lg md:mx-0 md:aspect-7/10 md:max-h-[min(85vh,40rem)] md:max-w-none">

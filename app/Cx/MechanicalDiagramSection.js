@@ -74,7 +74,10 @@ function OverlayRightCallout({ text, top, dot }) {
 
 export default function MechanicalDiagramSection() {
   return (
-    <section className="bg-white px-4 py-10 sm:px-6 md:px-8 md:py-12">
+    <section
+      id="mechanical-operation"
+      className="scroll-mt-6 bg-white px-4 py-10 sm:px-6 md:px-8 md:py-12"
+    >
       <div className="mx-auto max-w-screen-2xl">
         <div className="relative mx-auto w-full max-w-4xl">
           <Image

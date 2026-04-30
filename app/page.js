@@ -4,6 +4,11 @@ import GravityMotorSection from "./Cx/GravityMotorSection";
 import MechanicalDiagramSection from "./Cx/MechanicalDiagramSection";
 import ApplicationsSection from "./Cx/ApplicationsSection";
 import ComponentShowcaseSection from "./Cx/ComponentShowcaseSection";
+import CableAttachmentSection from "./Cx/CableAttachmentSection";
+import PatentApplicationSection from "./Cx/PatentApplicationSection";
+import EnergyGallerySection from "./Cx/EnergyGallerySection";
+import OperatingPrincipleSection from "./Cx/OperatingPrincipleSection";
+import Footer from "./Cx/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +19,11 @@ export default function Home() {
       <MechanicalDiagramSection />
       <ApplicationsSection />
       <ComponentShowcaseSection />
+      <CableAttachmentSection />
+      <PatentApplicationSection />
+      <EnergyGallerySection />
+      <OperatingPrincipleSection />
+      <Footer />
     </div>
   );
 }
