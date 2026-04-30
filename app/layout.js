@@ -1,4 +1,5 @@
 import { Space_Grotesk } from "next/font/google";
+import AosInit from "./Cx/AosInit";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -17,7 +18,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${spaceGrotesk.variable} ${spaceGrotesk.className} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex min-h-full flex-col overflow-x-hidden">
+        <AosInit />
+        {children}
+      </body>
     </html>
   );
 }

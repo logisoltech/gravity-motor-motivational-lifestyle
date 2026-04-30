@@ -20,7 +20,10 @@ const bullets = [
 
 export default function OperatingPrincipleSection() {
   return (
-    <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+    <section
+      className="bg-white py-12 sm:py-16 md:py-20 lg:py-24"
+      data-aos="fade-up"
+    >
       <div className="mx-auto w-full max-w-none px-4 sm:px-6 md:px-10 lg:px-16">
         <div className="w-full rounded-3xl border-2 border-dashed border-neutral-400 px-6 py-10 sm:px-10 sm:py-12 md:px-14 md:py-16 lg:px-20 lg:py-20">
           <h2 className={h2}>Background</h2>

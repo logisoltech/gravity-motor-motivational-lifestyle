@@ -3,6 +3,7 @@ export default function PatentApplicationSection() {
     <section
       id="patent"
       className="scroll-mt-6 bg-white px-4 py-10 sm:px-6 md:py-14"
+      data-aos="fade-up"
     >
       <div className="mx-auto max-w-3xl text-center uppercase">
         <h2 className="text-lg font-bold leading-snug tracking-wide text-neutral-950 sm:text-xl md:text-2xl">

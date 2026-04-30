@@ -42,7 +42,11 @@ const imageFrame =
 
 export default function EnergyGallerySection() {
   return (
-    <section className="relative overflow-hidden bg-white py-10 sm:py-12 md:py-16">
+    <section
+      className="relative overflow-hidden bg-white py-10 sm:py-12 md:py-16"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
       <div className="relative mx-auto max-w-screen-2xl px-3 sm:px-4 md:px-6">
         <div className="grid grid-cols-1 items-end gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,2.1fr)_minmax(0,1fr)] md:gap-4 lg:gap-5">
           {/* Energy Exhibit */}

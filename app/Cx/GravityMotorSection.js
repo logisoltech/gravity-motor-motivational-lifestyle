@@ -5,6 +5,7 @@ export default function GravityMotorSection() {
     <section
       id="about"
       className="scroll-mt-6 bg-white px-4 py-10 sm:px-6 md:px-8 md:py-12"
+      data-aos="fade-up"
     >
       <div className="mx-auto grid max-w-screen-2xl items-center gap-8 md:grid-cols-2 md:gap-8 lg:gap-10 xl:gap-12">
         {/* Crop intrinsic side padding in the PNG via cover + portrait box */}

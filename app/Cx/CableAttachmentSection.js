@@ -64,7 +64,10 @@ const COL_MIN = "min-h-[20rem] md:min-h-[30rem] lg:min-h-[32rem]";
 
 export default function CableAttachmentSection() {
   return (
-    <section className="bg-white px-4 py-8 sm:px-6 md:px-8 md:py-12">
+    <section
+      className="bg-white px-4 py-8 sm:px-6 md:px-8 md:py-12"
+      data-aos="fade-left"
+    >
       <div className="grid w-full grid-cols-1 gap-3 md:grid-cols-2 md:items-stretch md:gap-2 lg:gap-3">
         {/* Large left — pulley (label left; dot ~46% top, ~18% from right → 82% from left) */}
         <div

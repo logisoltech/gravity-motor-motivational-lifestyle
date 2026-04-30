@@ -3,7 +3,11 @@ import Nav from "./Nav";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
+    <section
+      className="relative min-h-screen w-full overflow-hidden"
+      data-aos="fade-in"
+      data-aos-duration="900"
+    >
       <Image
         src="/hero-bg.png"
         alt=""

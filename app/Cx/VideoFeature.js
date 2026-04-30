@@ -3,7 +3,10 @@ import { FaPlay } from "react-icons/fa";
 
 export default function VideoFeature() {
   return (
-    <section className="w-full px-4 pb-10 pt-6 sm:px-6 md:px-8 lg:pt-10">
+    <section
+      className="w-full px-4 pb-10 pt-6 sm:px-6 md:px-8 lg:pt-10"
+      data-aos="fade-up"
+    >
       <div className="relative mx-auto aspect-video max-w-6xl overflow-hidden rounded-3xl sm:rounded-[1.75rem]">
         <Image
           src="/video.png"

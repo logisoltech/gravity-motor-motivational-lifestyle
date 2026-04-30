@@ -24,7 +24,10 @@ const ICONS = [
 
 export default function ApplicationsSection() {
   return (
-    <section className="bg-white px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14">
+    <section
+      className="bg-white px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14"
+      data-aos="zoom-in"
+    >
       <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
         <p className="text-base leading-relaxed text-neutral-700 sm:text-lg">
           Increase in height and weight is more continuous powerful endless
