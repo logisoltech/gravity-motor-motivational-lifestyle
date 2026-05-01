@@ -43,7 +43,7 @@ const imageFrame =
 export default function EnergyGallerySection() {
   return (
     <section
-      className="relative overflow-hidden bg-white py-10 sm:py-12 md:py-16"
+      className="relative overflow-hidden bg-white pb-10 sm:pb-12 md:pb-16"
       data-aos="fade-up"
       data-aos-delay="100"
     >

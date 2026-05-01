@@ -14,14 +14,14 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full">
       <Hero />
+      <PatentApplicationSection />
+      <EnergyGallerySection />
       <VideoFeature />
       <GravityMotorSection />
       <MechanicalDiagramSection />
       <ApplicationsSection />
       <ComponentShowcaseSection />
       <CableAttachmentSection />
-      <PatentApplicationSection />
-      <EnergyGallerySection />
       <OperatingPrincipleSection />
       <Footer />
     </div>
