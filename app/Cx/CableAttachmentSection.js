@@ -1,132 +1,139 @@
 import Image from "next/image";
 
-function CalloutLeft({ text, topPct, dotXPct, labelEdgePct = 16 }) {
+function CalloutLeft({ text, topPct, dotXPct, labelXPct = -50 }) {
+  const lineStartPct = labelXPct + 38;
+
   return (
     <div
-      className="pointer-events-none absolute left-0 right-0 z-10"
+      className="pointer-events-none absolute left-0 right-0 z-20"
       style={{ top: `${topPct}%`, transform: "translateY(-50%)" }}
     >
-      <p className="absolute left-0 top-1/2 w-[46%] max-w-44 -translate-y-1/2 pr-1 text-right text-[8px] font-medium uppercase leading-snug tracking-wide text-neutral-950 sm:max-w-52 sm:text-[10px] md:text-xs">
+      <p
+        className="absolute top-1/2 w-[38%] -translate-y-1/2 text-right text-xs font-bold uppercase leading-tight text-black sm:text-sm"
+        style={{ left: `${labelXPct}%` }}
+      >
         {text}
       </p>
+
       <div
-        className="absolute top-1/2 h-0 -translate-y-1/2 border-b border-dotted border-neutral-800"
+        className="absolute top-1/2 h-0 -translate-y-1/2 border-b border-dotted border-black"
         style={{
-          left: `${labelEdgePct}%`,
-          width: `calc(${dotXPct}% - ${labelEdgePct}%)`,
+          left: `${lineStartPct}%`,
+          width: `calc(${dotXPct}% - ${lineStartPct}%)`,
         }}
-        aria-hidden
       />
+
       <span
-        className="absolute top-1/2 size-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-neutral-950 sm:size-2"
+        className="absolute top-1/2 size-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black"
         style={{ left: `${dotXPct}%` }}
-        aria-hidden
       />
     </div>
   );
 }
 
-function CalloutRight({ text, topPct, dotXPct, labelStartPct = 80 }) {
+function CalloutRight({ text, topPct, dotXPct, labelXPct = 118 }) {
   return (
     <div
-      className="pointer-events-none absolute left-0 right-0 z-10"
+      className="pointer-events-none absolute left-0 right-0 z-20"
       style={{ top: `${topPct}%`, transform: "translateY(-50%)" }}
     >
+      <span
+        className="absolute top-1/2 size-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black"
+        style={{ left: `${dotXPct}%` }}
+      />
+
       <div
-        className="absolute top-1/2 h-0 -translate-y-1/2 border-b border-dotted border-neutral-800"
+        className="absolute top-1/2 h-0 -translate-y-1/2 border-b border-dotted border-black"
         style={{
           left: `${dotXPct}%`,
-          width: `calc(${labelStartPct}% - ${dotXPct}%)`,
+          width: `calc(${labelXPct}% - ${dotXPct}%)`,
         }}
-        aria-hidden
       />
-      <span
-        className="absolute top-1/2 size-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-neutral-950 sm:size-2"
-        style={{ left: `${dotXPct}%` }}
-        aria-hidden
-      />
-      <p className="absolute right-0 top-1/2 w-[46%] max-w-44 -translate-y-1/2 pl-1 text-left text-[8px] font-medium uppercase leading-snug tracking-wide text-neutral-950 sm:max-w-52 sm:text-[10px] md:text-xs">
+
+      <p
+        className="absolute top-1/2 w-[30%] -translate-y-1/2 text-left text-xs font-bold uppercase leading-tight text-black sm:text-sm"
+        style={{ left: `${labelXPct}%` }}
+      >
         {text}
       </p>
     </div>
   );
 }
 
-function InsetOverlay({ children }) {
-  return (
-    <div className="pointer-events-none absolute inset-2 z-10 sm:inset-3">
-      {children}
-    </div>
-  );
-}
-
-const COL_MIN = "min-h-[20rem] md:min-h-[30rem] lg:min-h-[32rem]";
-
 export default function CableAttachmentSection() {
+  // pulley 300×488, rod & door-1 258×236 — right panels are true squares
+  const sectionHeight = 480;
+  const gap = 8;
+  const squareSize = (sectionHeight - gap) / 2;
+  const leftWidth = Math.round(sectionHeight * (300 / 488));
+
   return (
     <section
       className="bg-white px-4 py-8 sm:px-6 md:px-8 md:py-12"
       data-aos="fade-left"
     >
-      <div className="grid w-full grid-cols-1 gap-3 md:grid-cols-2 md:items-stretch md:gap-2 lg:gap-3">
-        {/* Large left — pulley (label left; dot ~46% top, ~18% from right → 82% from left) */}
+      <div className="mx-auto flex w-fit max-w-full gap-2">
+        {/* LEFT TALL — pulley.png */}
         <div
-          className={`relative w-full overflow-hidden rounded-3xl ${COL_MIN}`}
+          className="relative shrink-0 overflow-visible rounded-2xl"
+          style={{ width: leftWidth, height: sectionHeight }}
         >
           <Image
             src="/pulley.png"
             alt="Cable flatback weight attachment on pulley"
             fill
-            className="object-cover object-center"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            className="rounded-2xl object-cover object-center"
+            sizes={`${leftWidth}px`}
           />
-          <InsetOverlay>
-            <CalloutLeft
-              text="Cable Flatback Weight Attachment"
-              topPct={46}
-              dotXPct={82}
-              labelEdgePct={14}
-            />
-          </InsetOverlay>
+
+          <CalloutLeft
+            text="Cable Flatback Weight Attachment"
+            topPct={44}
+            dotXPct={54}
+          />
         </div>
 
-        {/* Right column — rod + door; combined height matches left via shared min-h + flex-1 */}
+        {/* RIGHT COLUMN — square rod.png & door-1.png panels */}
         <div
-          className={`flex flex-col gap-1 sm:gap-1.5 ${COL_MIN}`}
+          className="flex shrink-0 flex-col gap-2"
+          style={{ width: squareSize, height: sectionHeight }}
         >
-          <div className="relative min-h-0 flex-1 overflow-hidden rounded-3xl">
+          <div
+            className="relative overflow-visible rounded-2xl"
+            style={{ width: squareSize, height: squareSize }}
+          >
             <Image
               src="/rod.png"
               alt="Top door and cable seals"
               fill
-              className="object-cover object-center"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              className="rounded-2xl object-cover object-center"
+              sizes={`${squareSize}px`}
             />
-            <InsetOverlay>
-              <CalloutRight
-                text="Top Door & Cable Seals"
-                topPct={25}
-                dotXPct={42}
-                labelStartPct={82}
-              />
-            </InsetOverlay>
+
+            <CalloutRight
+              text="Top Door & Cable Seals"
+              topPct={25}
+              dotXPct={30}
+            />
           </div>
-          <div className="relative min-h-0 flex-1 overflow-hidden rounded-3xl">
+
+          <div
+            className="relative overflow-visible rounded-2xl"
+            style={{ width: squareSize, height: squareSize }}
+          >
             <Image
               src="/door-1.png"
               alt="Bottom door and cable seals"
               fill
-              className="object-cover object-center"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              className="rounded-2xl object-cover object-center"
+              sizes={`${squareSize}px`}
             />
-            <InsetOverlay>
-              <CalloutRight
-                text="Bottom Door & Cable Seals"
-                topPct={72}
-                dotXPct={58}
-                labelStartPct={82}
-              />
-            </InsetOverlay>
+
+            <CalloutRight
+              text="Bottom Door & Cable Seals"
+              topPct={68}
+              dotXPct={52}
+            />
           </div>
         </div>
       </div>
