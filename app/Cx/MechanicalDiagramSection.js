@@ -2,19 +2,18 @@ import Image from "next/image";
 
 /** Percent along full diagram width where the dot sits (left chamber ~38–43%, right ~57–62%). */
 const LEFT_CALLOUTS = [
-  { key: "top", text: "Top Air Sealed Door", top: 16, dot: 41 },
-  { key: "grav", text: "Gravity Air Chamber Down (Airlocked)", top: 30, dot: 40 },
-  { key: "div", text: "Liquid Divider", top: 44, dot: 39 },
-  { key: "bottom", text: "Bottom Air Sealed Doors", top: 61, dot: 41 },
-  { key: "gen", text: "Generator", top: 86, dot: 40 },
+  { key: "top", text: "Top Air Sealed Doors", top: 16, dot: 41 },
+  { key: "grav", text: "Gravity Air Chamber Down (Air Locked)", top: 30, dot: 40 },
+  { key: "div", text: "Liquid - Air Divider", top: 44, dot: 39 },
+  { key: "bottom", text: "Bottom Air Sealed", top: 61, dot: 41 },
 ];
 
 const RIGHT_CALLOUTS = [
-  { key: "top", text: "Top Air Sealed Door", top: 16, dot: 59 },
-  { key: "grav", text: "Gravity Air Chamber Down (Airlocked)", top: 30, dot: 60 },
-  { key: "div", text: "Liquid Divider", top: 44, dot: 61 },
+  { key: "top", text: "Top Air Sealed Doors", top: 16, dot: 59 },
+  { key: "div", text: "Liquid - Air Divider", top: 38, dot: 61 },
+  { key: "buoy", text: "Liquid Buoyancy Chamber Up (Air Locked)", top: 52, dot: 60 },
   { key: "bottom", text: "Bottom Air Sealed Doors", top: 61, dot: 59 },
-  { key: "gen", text: "Generator", top: 86, dot: 60 },
+  { key: "gen", text: "Generator Output", top: 86, dot: 60 },
 ];
 
 const LABEL_EDGE_LEFT = 20.5;
@@ -113,10 +112,6 @@ export default function MechanicalDiagramSection() {
             ))}
           </div>
         </div>
-
-        <p className="mx-auto mt-3 max-w-4xl text-center text-xs font-bold uppercase tracking-wide text-neutral-950 sm:text-sm">
-          Generator Output
-        </p>
       </div>
     </section>
   );
