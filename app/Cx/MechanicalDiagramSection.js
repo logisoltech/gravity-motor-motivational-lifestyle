@@ -2,17 +2,17 @@ import Image from "next/image";
 
 /** Percent along full diagram width where the dot sits (left chamber ~38–43%, right ~57–62%). */
 const LEFT_CALLOUTS = [
-  { key: "top", text: "Top Air Sealed Doors", top: 16, dot: 41 },
-  { key: "grav", text: "Gravity Air Chamber Down (Air Locked)", top: 30, dot: 40 },
-  { key: "div", text: "Liquid - Air Divider", top: 44, dot: 39 },
-  { key: "bottom", text: "Bottom Air Sealed", top: 61, dot: 41 },
+  { key: "top", text: "Top Air Sealed Doors", top: 24.5, dot: 38 },
+  { key: "grav", text: "Gravity Air Chamber Down (Air Locked)", top: 34, dot: 48 },
+  { key: "div", text: "Liquid - Air Divider", top: 44, dot: 38 },
+  { key: "bottom", text: "Bottom Air Sealed Doors", top: 63, dot: 45 },
 ];
 
 const RIGHT_CALLOUTS = [
-  { key: "top", text: "Top Air Sealed Doors", top: 16, dot: 59 },
-  { key: "div", text: "Liquid - Air Divider", top: 38, dot: 61 },
-  { key: "buoy", text: "Liquid Buoyancy Chamber Up (Air Locked)", top: 52, dot: 60 },
-  { key: "bottom", text: "Bottom Air Sealed Doors", top: 61, dot: 59 },
+  { key: "top", text: "Top Air Sealed Doors", top: 25, dot: 57 },
+  { key: "div", text: "Liquid - Air Divider", top: 40, dot: 54 },
+  { key: "buoy", text: "Liquid Buoyancy Chamber Up (Air Locked)", top: 52, dot: 63 },
+  { key: "bottom", text: "Bottom Air Sealed Doors", top: 63.5, dot: 63 },
   { key: "gen", text: "Generator Output", top: 86, dot: 60 },
 ];
 

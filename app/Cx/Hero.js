@@ -31,9 +31,9 @@ export default function Hero() {
       />
 
       <a
-        href="/"
+        href="https://motivational-lifestyle.vercel.app/"
         className="absolute left-6 top-6 z-30 sm:left-8 sm:top-8"
-        aria-label="Home"
+        aria-label="Motivational Lifestyle"
       >
         <Image
           src="/logo.png"

@@ -9,6 +9,9 @@ const heading =
 const imageFrame =
   "relative h-56 w-full overflow-hidden rounded-3xl sm:h-64 md:h-72 lg:h-80";
 
+const sideImageFrame =
+  "relative h-56 w-full overflow-hidden rounded-3xl bg-[#E3E5E9] sm:h-64 md:h-72 lg:h-80";
+
 export default function EnergyGallerySection() {
   const [activeImage, setActiveImage] = useState(null);
 
@@ -34,13 +37,13 @@ export default function EnergyGallerySection() {
                     alt: "Energy exhibit — isometric spiral tower and landscape",
                   })
                 }
-                className={`${imageFrame} group`}
+                className={`${sideImageFrame} group`}
               >
                 <Image
                   src="/scene.png"
                   alt="Energy exhibit — isometric spiral tower and landscape"
                   fill
-                  className="object-cover transition duration-500 group-hover:scale-105"
+                  className="object-contain transition duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 28vw"
                 />
               </button>
@@ -85,29 +88,19 @@ export default function EnergyGallerySection() {
                     alt: "How it works — straw and liquid diagram",
                   })
                 }
-                className={`${imageFrame} group`}
+                className={`${sideImageFrame} group`}
               >
                 <Image
                   src="/straw.png"
                   alt="How it works — straw and liquid diagram"
                   fill
-                  className="object-cover object-center transition duration-500 group-hover:scale-105"
+                  className="object-contain object-center transition duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 28vw"
                 />
               </button>
             </div>
           </div>
         </div>
-
-        <div
-          className="pointer-events-none absolute inset-y-0 left-0 z-5 w-12 bg-linear-to-r from-white via-white/75 to-transparent sm:w-20 md:w-28 lg:w-36"
-          aria-hidden
-        />
-
-        <div
-          className="pointer-events-none absolute inset-y-0 right-0 z-5 w-12 bg-linear-to-l from-white via-white/75 to-transparent sm:w-20 md:w-28 lg:w-36"
-          aria-hidden
-        />
       </section>
 
       {activeImage && (
