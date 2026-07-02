@@ -18,17 +18,7 @@ export default function Hero() {
           className="object-cover object-top"
           sizes="100vw"
         />
-        <div
-          className="absolute inset-0 z-[1] bg-black/50"
-          aria-hidden
-        />
       </div>
-
-      {/* Extra top vignette so logo & pill nav stay readable */}
-      <div
-        className="pointer-events-none absolute inset-0 z-10 min-h-screen bg-gradient-to-b from-black/30 via-transparent to-transparent"
-        aria-hidden
-      />
 
       <a
         href="https://motivational-lifestyle.vercel.app/"
