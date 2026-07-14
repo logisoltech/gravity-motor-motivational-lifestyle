@@ -28,34 +28,34 @@ export default function ApplicationsSection() {
       className="bg-white px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14"
       data-aos="zoom-in"
     >
-      <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-        <p className="text-base leading-relaxed text-neutral-700 sm:text-lg">
+      <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
+        <p className="text-lg leading-relaxed text-neutral-700 sm:text-xl md:text-2xl">
           Increase in height and weight is more continuous powerful endless
           energy.
         </p>
-        <p className="mt-3 text-base leading-relaxed text-neutral-700 sm:text-lg">
+        <p className="mt-4 text-lg leading-relaxed text-neutral-700 sm:mt-5 sm:text-xl md:text-2xl">
           Underground or above ground anywhere in:
         </p>
 
-        <ul className="mt-8 flex w-full max-w-xl flex-col items-stretch justify-center gap-8 sm:mt-10 sm:flex-row sm:gap-6 md:mt-10 md:gap-10">
+        <ul className="mt-10 flex w-full max-w-2xl flex-col items-stretch justify-center gap-10 sm:mt-12 sm:flex-row sm:gap-8 md:mt-14 md:gap-12">
           {ICONS.map(({ key, label, Icon }) => (
             <li
               key={key}
-              className="flex flex-1 flex-col items-center gap-3 sm:min-w-0"
+              className="flex flex-1 flex-col items-center gap-4 sm:min-w-0 sm:gap-5"
             >
               <Icon
-                className="size-14 shrink-0 text-neutral-900 sm:size-16"
+                className="size-20 shrink-0 text-neutral-900 sm:size-24 md:size-28"
                 strokeWidth={1.25}
                 aria-hidden
               />
-              <span className="text-sm font-normal text-neutral-700 sm:text-base">
+              <span className="text-lg font-normal text-neutral-700 sm:text-xl md:text-2xl">
                 {label}
               </span>
             </li>
           ))}
         </ul>
 
-        <p className="mt-8 max-w-xl text-base leading-relaxed text-neutral-700 sm:mt-10 sm:text-lg md:mt-10">
+        <p className="mt-10 max-w-2xl text-lg leading-relaxed text-neutral-700 sm:mt-12 sm:text-xl md:mt-14 md:text-2xl">
           Multiple sections can also be added to increase output.
         </p>
       </div>
