@@ -82,7 +82,7 @@ export default function MechanicalDiagramSection() {
       <div className="mx-auto max-w-screen-2xl">
         <div className="relative mx-auto w-full max-w-4xl">
           <Image
-            src="/gravity-motor-2.png"
+            src="/gravity-motor-3.png"
             alt="Dual-section gravity motor with pulleys, liquid chambers, and generator bases"
             width={1400}
             height={900}
