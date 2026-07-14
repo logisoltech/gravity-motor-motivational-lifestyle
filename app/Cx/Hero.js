@@ -35,6 +35,21 @@ export default function Hero() {
         />
       </a>
 
+      <div className="absolute right-4 top-6 z-30 flex items-center gap-2.5 sm:right-8 sm:top-8 sm:gap-3">
+        <a
+          href="#invest"
+          className="rounded-full bg-[#e8b93b] px-4 py-2 text-xs font-semibold text-neutral-900 shadow-lg transition-colors hover:bg-[#f0c65a] sm:px-6 sm:py-2.5 sm:text-sm"
+        >
+          Invest / Donate
+        </a>
+        <a
+          href="#crypto"
+          className="rounded-full border border-[#e8b93b] px-4 py-2 text-xs font-semibold text-[#e8b93b] transition-colors hover:bg-[#e8b93b] hover:text-neutral-900 sm:px-6 sm:py-2.5 sm:text-sm"
+        >
+          Buy M.D Crypto
+        </a>
+      </div>
+
       <div
         className="pointer-events-none absolute inset-x-0 top-[42%] z-20 flex -translate-y-1/2 flex-col items-center px-4 text-center sm:top-[44%]"
         data-aos="fade-up"
