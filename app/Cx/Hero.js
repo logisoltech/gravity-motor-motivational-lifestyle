@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Full width, native 3:2 (1536×1024) — entire image, no side bars */}
       <div className="relative aspect-[3/2] w-full">
         <Image
-          src="/hero-bg.png"
+          src="/heero.png"
           alt=""
           fill
           priority

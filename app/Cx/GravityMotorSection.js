@@ -11,7 +11,7 @@ export default function GravityMotorSection() {
         {/* Crop intrinsic side padding in the PNG via cover + portrait box */}
         <div className="relative mx-auto aspect-3/4 w-full max-w-md overflow-hidden sm:max-w-lg md:mx-0 md:aspect-7/10 md:max-h-[min(85vh,40rem)] md:max-w-none">
           <Image
-            src="/gravity-motor.png"
+            src="/gm.png"
             alt="Gravity Motor device with liquid pistons and belt-and-pulley assembly"
             fill
             className="object-cover object-center"
