@@ -61,14 +61,14 @@ export default function EnergyGallerySection() {
                 type="button"
                 onClick={() =>
                   setActiveImage({
-                    src: "/hero-bg.png",
+                    src: "/heero.png",
                     alt: "Energy city with modern power plant building",
                   })
                 }
                 className={`${imageFrame} group`}
               >
                 <Image
-                  src="/hero-bg.png"
+                  src="/heero.png"
                   alt="Energy city with modern power plant building"
                   fill
                   className="object-cover object-center transition duration-500 group-hover:scale-105"

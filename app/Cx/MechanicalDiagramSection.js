@@ -4,15 +4,21 @@ import Image from "next/image";
 const LEFT_CALLOUTS = [
   { key: "top", text: "Top Air Sealed Doors", top: 24.5, dot: 38 },
   { key: "grav", text: "Gravity Air Chamber Down (Air Locked)", top: 34, dot: 48 },
-  { key: "div", text: "Liquid - Air Divider", top: 44, dot: 38 },
+  { key: "div", text: "Liquid - Air Divider", top: 44, dot: 43 },
+  { key: "buoy", text: "Liquid Buoyancy Chamber Up (Air Locked)", top: 52, dot: 40 },
+
   { key: "bottom", text: "Bottom Air Sealed Doors", top: 63, dot: 45 },
+  { key: "bottom", text: "Liquid Air Chamber Down (Air Locked)", top: 72, dot: 47 },
+  { key: "gen", text: "Generator Output", top: 86, dot: 41 },
 ];
 
 const RIGHT_CALLOUTS = [
   { key: "top", text: "Top Air Sealed Doors", top: 25, dot: 57 },
-  { key: "div", text: "Liquid - Air Divider", top: 40, dot: 54 },
-  { key: "buoy", text: "Liquid Buoyancy Chamber Up (Air Locked)", top: 52, dot: 63 },
+  { key: "grav", text: "Gravity Air Chamber Down (Air Locked)", top: 34, dot: 63 },
+  { key: "div", text: "Liquid - Air Divider", top: 40, dot: 58.5 },
+  { key: "buoy", text: "Liquid Buoyancy Chamber Up (Air Locked)", top: 52, dot: 55.5 },
   { key: "bottom", text: "Bottom Air Sealed Doors", top: 63.5, dot: 63 },
+  { key: "bottom", text: "Liquid Air Chamber Down (Air Locked)", top: 72, dot: 63 },
   { key: "gen", text: "Generator Output", top: 86, dot: 60 },
 ];
 
