@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 const heading =
-  "text-left text-xl font-bold uppercase leading-tight tracking-wide text-neutral-950 sm:text-2xl md:text-3xl";
+  "text-center text-xl font-bold uppercase leading-tight tracking-wide text-neutral-950 sm:text-2xl md:text-3xl";
 
 const imageFrame =
   "relative h-56 w-full overflow-hidden rounded-3xl sm:h-64 md:h-72 lg:h-80";

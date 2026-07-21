@@ -12,13 +12,13 @@ export default function PatentApplicationSection() {
         <p className="mt-3 text-lg font-bold leading-snug tracking-wide text-neutral-950 sm:text-xl md:text-2xl">
           U.S. Patent Application
         </p>
-        <p className="mt-3 text-sm font-normal leading-relaxed tracking-wide text-neutral-600 sm:text-base">
+        <p className="mt-3 text-base font-normal leading-relaxed tracking-wide text-neutral-600 sm:text-lg md:text-xl">
           By Jay Pirincci — 917 922 5460
         </p>
-        <p className="mt-1 text-sm font-normal leading-relaxed tracking-wide text-neutral-600 sm:text-base">
+        <p className="mt-1 text-base font-normal leading-relaxed tracking-wide text-neutral-600 sm:text-lg md:text-xl">
           Jay Gravi Bouyant Balls
         </p>
-        <p className="mt-1 text-sm font-normal leading-relaxed tracking-wide text-neutral-600 sm:text-base">
+        <p className="mt-1 text-base font-normal leading-relaxed tracking-wide text-neutral-600 sm:text-lg md:text-xl">
           U.S. Patent #8756932
         </p>
 
@@ -26,10 +26,10 @@ export default function PatentApplicationSection() {
           <h3 className="text-lg font-bold leading-snug tracking-wide text-neutral-950 sm:text-xl md:text-2xl">
             Mechanical Operation
           </h3>
-          <p className="mt-3 text-sm font-normal leading-relaxed tracking-wide text-neutral-600 sm:text-base">
+          <p className="mt-3 text-base font-normal leading-relaxed tracking-wide text-neutral-600 sm:text-lg md:text-xl">
             FEEE - Free Endless Energy Everywhere
           </p>
-          <p className="mt-2 text-sm font-normal leading-relaxed tracking-wide text-neutral-600 sm:text-base">
+          <p className="mt-2 text-base font-normal leading-relaxed tracking-wide text-neutral-600 sm:text-lg md:text-xl">
             Gravity + Buoyancy = Free Energy
           </p>
         </div>
