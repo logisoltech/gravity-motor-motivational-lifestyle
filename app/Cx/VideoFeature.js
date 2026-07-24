@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { FaPlay } from "react-icons/fa";
 
 export default function VideoFeature() {
@@ -34,22 +35,30 @@ export default function VideoFeature() {
       data-aos="fade-up"
     >
       <div className="relative mx-auto aspect-video max-w-6xl overflow-hidden rounded-3xl sm:rounded-[1.75rem]">
-        
         {/* VIDEO */}
         <video
           ref={videoRef}
           className="absolute inset-0 h-full w-full object-cover"
           src="/gravity-1.mp4"
+          poster="/gravity-motor-3.png"
           playsInline
           preload="metadata"
           controls={isPlaying}
           onEnded={handleEnded}
         />
 
-        {/* DARK OVERLAY (ONLY WHEN NOT PLAYING) */}
+        {/* THUMBNAIL + DARK OVERLAY (ONLY WHEN NOT PLAYING) */}
         {!isPlaying && (
           <>
-            <div className="absolute inset-0 z-[1] bg-black/35" aria-hidden />
+            <Image
+              src="/gravity-motor-3.png"
+              alt=""
+              fill
+              className="absolute inset-0 z-[1] object-cover"
+              sizes="(max-width: 1152px) 100vw, 1152px"
+              priority
+            />
+            <div className="absolute inset-0 z-[2] bg-black/35" aria-hidden />
 
             {/* PLAY BUTTON */}
             <div className="absolute inset-0 z-10 flex items-center justify-center p-4">
