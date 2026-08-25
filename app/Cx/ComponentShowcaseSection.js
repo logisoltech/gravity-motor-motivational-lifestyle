@@ -62,7 +62,7 @@ function CalloutRight({ text, topPct, dotXPct, labelXPct = 118 }) {
 
 const PANELS = [
   {
-    src: "/gearbox-1.png",
+    src: "/gearboxer-1.png",
     alt: "Gear shafts and gear boxes engage-disengage mechanism",
     width: 1920,
     height: 1080,
