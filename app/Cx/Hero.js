@@ -38,7 +38,7 @@ export default function Hero() {
       <div className="absolute right-4 top-6 z-30 flex items-center gap-2.5 sm:right-8 sm:top-8 sm:gap-3">
         <a
           href="#invest"
-          className="rounded-full bg-[#e8b93b] px-4 py-2 text-xs font-semibold text-neutral-900 shadow-lg transition-colors hover:bg-[#f0c65a] sm:px-6 sm:py-2.5 sm:text-sm"
+          className="rounded-full bg-[#e8b93b] px-4 py-2 text-sm font-semibold text-neutral-900 shadow-lg transition-colors hover:bg-[#f0c65a] sm:px-6 sm:py-2.5 sm:text-base"
         >
           Invest / Donate
         </a>
