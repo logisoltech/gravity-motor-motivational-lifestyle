@@ -13,7 +13,7 @@ export default function PatentApplicationSection() {
           U.S. Patent Application
         </p>
         <p className="mt-3 text-base font-normal leading-relaxed tracking-wide text-neutral-600 sm:text-lg md:text-xl">
-          By Jay Pirincci — 917 922 5460
+          By Jay Pirincci
         </p>
         <p className="mt-1 text-base font-normal leading-relaxed tracking-wide text-neutral-600 sm:text-lg md:text-xl">
           Jay Gravi Bouyant Balls

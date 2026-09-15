@@ -1,5 +1,9 @@
 import Image from "next/image";
+import ContactButton from "./ContactButton";
 import Nav from "./Nav";
+
+const cta =
+  "inline-flex items-center justify-center rounded-full bg-[#e8b93b] px-4 py-2.5 text-sm font-semibold whitespace-nowrap text-neutral-900 shadow-lg transition-colors hover:bg-[#f0c65a] sm:px-5 sm:text-base";
 
 export default function Hero() {
   return (
@@ -8,7 +12,6 @@ export default function Hero() {
       data-aos="fade-in"
       data-aos-duration="900"
     >
-      {/* Full width, native 3:2 (1536×1024) — entire image, no side bars */}
       <div className="relative aspect-[3/2] w-full">
         <Image
           src="/heero.png"
@@ -20,35 +23,71 @@ export default function Hero() {
         />
       </div>
 
-      <a
-        href="https://motivational-lifestyle.vercel.app/"
-        className="absolute left-6 top-6 z-30 sm:left-8 sm:top-8"
-        aria-label="Motivational Lifestyle"
-      >
-        <Image
-          src="/logo.png"
-          alt="Institutional Lifestyle"
-          width={400}
-          height={130}
-          className="h-20 w-auto sm:h-24 md:h-28 lg:h-32"
-          priority
-        />
-      </a>
+      <header className="absolute inset-x-0 top-0 z-30 px-4 pt-5 sm:px-6 sm:pt-6 md:px-8 md:pt-7">
+        {/* Single row on md+: logo | nav | buttons — no overlap */}
+        <div className="hidden items-center gap-4 md:grid md:grid-cols-[auto_minmax(0,1fr)_auto] md:gap-5 lg:gap-6">
+          <a
+            href="https://motivational-lifestyle.vercel.app/"
+            className="shrink-0"
+            aria-label="Motivational Lifestyle"
+          >
+            <Image
+              src="/logo.png"
+              alt="Institutional Lifestyle"
+              width={400}
+              height={130}
+              className="h-20 w-auto lg:h-24 xl:h-28"
+              priority
+            />
+          </a>
 
-      <div className="absolute right-4 top-6 z-30 flex items-center gap-2.5 sm:right-8 sm:top-8 sm:gap-3">
-        <a
-          href="#invest"
-          className="rounded-full bg-[#e8b93b] px-4 py-2 text-sm font-semibold text-neutral-900 shadow-lg transition-colors hover:bg-[#f0c65a] sm:px-6 sm:py-2.5 sm:text-base"
-        >
-          Invest / Donate
-        </a>
-        <a
-          href="#crypto"
-          className="rounded-full bg-[#e8b93b] px-4 py-2 text-sm font-semibold text-neutral-900 shadow-lg transition-colors hover:bg-[#f0c65a] sm:px-6 sm:py-2.5 sm:text-base"
-        >
-          Buy M.D Crypto
-        </a>
-      </div>
+          <div className="flex min-w-0 justify-center">
+            <Nav />
+          </div>
+
+          <div className="flex shrink-0 items-center gap-2.5 lg:gap-3">
+            <a href="#invest" className={cta}>
+              Invest / Donate
+            </a>
+            <a href="#crypto" className={cta}>
+              Buy M.D Crypto
+            </a>
+            <ContactButton />
+          </div>
+        </div>
+
+        {/* Mobile */}
+        <div className="md:hidden">
+          <div className="flex items-center justify-between gap-3">
+            <a
+              href="https://motivational-lifestyle.vercel.app/"
+              className="shrink-0"
+              aria-label="Motivational Lifestyle"
+            >
+              <Image
+                src="/logo.png"
+                alt="Institutional Lifestyle"
+                width={400}
+                height={130}
+                className="h-16 w-auto sm:h-20"
+                priority
+              />
+            </a>
+            <ContactButton />
+          </div>
+          <div className="mt-3 flex justify-center">
+            <Nav />
+          </div>
+          <div className="mt-3 flex justify-center gap-2">
+            <a href="#invest" className={cta}>
+              Invest / Donate
+            </a>
+            <a href="#crypto" className={cta}>
+              Buy M.D Crypto
+            </a>
+          </div>
+        </div>
+      </header>
 
       <div
         className="pointer-events-none absolute inset-x-0 top-[42%] z-20 flex -translate-y-1/2 flex-col items-center px-4 text-center sm:top-[44%]"
@@ -72,8 +111,6 @@ export default function Hero() {
           aria-hidden
         />
       </div>
-
-      <Nav />
     </section>
   );
 }

@@ -8,10 +8,10 @@ const LINKS = [
 export default function Nav() {
   return (
     <nav
-      className="absolute left-1/2 top-21 z-30 w-[min(calc(100vw-2rem),42rem)] max-w-[calc(100vw-2rem)] -translate-x-1/2 rounded-full border border-white/10 bg-black/40 px-4 py-2.5 shadow-lg backdrop-blur-md sm:top-8 sm:w-auto sm:max-w-none sm:px-8 sm:py-3"
+      className="rounded-full border border-white/10 bg-black/40 px-4 py-2.5 shadow-lg backdrop-blur-md sm:px-6 sm:py-3"
       aria-label="Primary"
     >
-      <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:gap-x-8">
+      <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:gap-x-6 lg:gap-x-8">
         {LINKS.map(({ label, href }) => (
           <li key={href}>
             <a
